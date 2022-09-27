@@ -21,7 +21,8 @@ for (let i = 1; i <= 5; i++) {
     console.log('You chose ' + playerSelection + ".");
   } else {
     alert("Invalid selection");
-    prompt("Choose your move.");
+    playerSelection = prompt("Choose your move.");
+    console.log('You chose ' + playerSelection + ".");
   }
 
   // Function for random computer choice (with console.log for debugging)
@@ -84,3 +85,10 @@ for (let i = 1; i <= 5; i++) {
   console.log('Player score: ' + playerScore, 'Computer score: ' + computerScore, 'Ties: ' + tie, 'Round: ' + i);
 }
 
+if (playerScore > computerScore) {
+  alert('You win this game! Play again!')
+  console.log('You win this game! Play again!')
+} else if (playerScore < computerScore) {
+  alert('Sorry, you lost this game! Refresh to play again!')
+  console.log('You win this game! Play again!')
+}
